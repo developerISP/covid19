@@ -32,31 +32,12 @@ target_file <- paste0(target_dir,"dpc-covid19-ita-andamento-nazionale.csv")
 ### ATTENZIONE: si trovano altri dati caricati
 raw_data <- read.csv(file = target_file, header = TRUE, sep = ",")
 raw_data$data <- as.POSIXct(raw_data$data, format="%Y-%m-%dT%H:%M:%S")
-#--- Questi comandi non sono più necessari -------------------------------
-#--- df_raw_data <- data.frame(DATE=raw_data$DateRep,
-#---                           COUNTRY=raw_data$CountryExp, 
-#---                           DAYCASES=raw_data$NewConfCases,
-#---                           DATDEATHS=raw_data$NewDeaths)
-#--- df_italy <- df_raw_data[is.element(df_raw_data$COUNTRY, "Italy"),]
-#--- C'e' una discrepanza di un giorno rispetto ai dati del sole24ore
-#--- https://lab24.ilsole24ore.com/coronavirus/
-#--- df_italy$DATE <- df_italy$DATE - as.difftime(1, unit = "days")
-#--- Questi comandi non sono più necessari -------------------------------
-# df_italy <- data.frame(t(sapply(raw_data,c)))
-# df_italy <- data.frame((sapply(raw_data,c)))
 df_italy <- raw_data
 
 #### ---- DA QUI' LAVORO ALL'INTERFACCIA INTERATTIVA PER UTENTE ---- ####
 #### ---- DA QUI' LAVORO ALL'INTERFACCIA INTERATTIVA PER UTENTE ---- ####
 #### ---- DA QUI' LAVORO ALL'INTERFACCIA INTERATTIVA PER UTENTE ---- ####
 target_dir_dati_italia <- "data/"
-#target_dir_dati_italia <- "/home/rosy/Documents/NicoMaffe/covid_wd/ministero_data/COVID-19/"
-#### ----
-#### ----
-#### ----
-# Target_file_nazionale <- paste0(target_dir_dati_italia,"dati-andamento-nazionale/dpc-covid19-ita-andamento-nazionale.csv")
-# Target_file_regioni <- paste0(target_dir_dati_italia,"dati-regioni/dpc-covid19-ita-regioni.csv")
-# Target_file_province <- paste0(target_dir_dati_italia,"dati-province/dpc-covid19-ita-province.csv")
 target_file_nazionale <- paste0(target_dir_dati_italia,"dpc-covid19-ita-andamento-nazionale.csv")
 target_file_regioni <-   paste0(target_dir_dati_italia,"dpc-covid19-ita-regioni.csv")
 target_file_province <-  paste0(target_dir_dati_italia,"dpc-covid19-ita-province.csv")
