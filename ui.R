@@ -1,23 +1,10 @@
 ######VERSION 0.0.1
 library(shiny)
-#source(file = "/home/rosy/Documents/NicoMaffe/covid_wd/covid19/main2source.R", verbose = TRUE)
 source(file = "main2source.R", verbose = TRUE) #per shinyapps.io
 url <- "https://twitter.com/intent/tweet?text=Coronavirus%20SARS-CoV-2%20in%20Italia%20at&url=http://colmargherita.dsa.unive.it/covid19/"
 #url <- "https://twitter.com/intent/tweet?text=Coronavirus%20SARS-CoV-2%20in%20Italia%20at&url=https://rosyproject.shinyapps.io/covid19/"
 ######
 shinyUI(fluidPage(
-# ESEMPIO PAGINA WEB CA' FOSCARI
-# <meta name="generator" content="TYPO3 CMS">
-# <meta name="viewport" content="width=device-width, initial-scale=1.0">
-# <meta http-equiv="X-UA-Compatible" content="IE=edge">
-# <meta property="og:type" content="website">
-# <meta property="og:site_name" content="Università Ca' Foscari Venezia">
-# <meta name="twitter:card" content="summary">
-# <meta name="twitter:site" content="@CaFoscari">
-# <meta property="og:url" content="http://www.unive.it/pag/12469/">
-# <meta property="og:title" content="Home">
-# <meta name="twitter:url" content="http://www.unive.it/pag/12469/">
-# <meta name="twitter:title" content="Home">
   tags$head(
     tags$meta(charset="UTF-8"),
     tags$meta(name="SARS-CoV-2", content="..."),
